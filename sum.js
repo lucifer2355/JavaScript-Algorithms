@@ -1,5 +1,5 @@
 // function sum(n) {
-//   return (n / 2) * (1 + n);
+//   return (n / 2) * (1 + n); //* 1
 // }
 
 function sum(numbers) {
