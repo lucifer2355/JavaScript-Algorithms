@@ -14,5 +14,6 @@ function minNum(numbers) {
 //! Best Case: [1, 2, 3] => n => O(n)
 //! Worst Case: [3, 2, 1] => n => O(n)
 //! Average Case: [2, 1, 3] => n => O(n)
+//! All have Linear Time Complexity (only one for loop)
 
 console.log(minNum([1, 2, 3]));

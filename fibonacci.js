@@ -7,7 +7,7 @@ function fibonacci(n) {
   return number[n]; //* 1
 }
 
-//! T = 1 + 1 + n - 1 + 1 = 2 + n = n
+//! T = 1 + 1 + n - 1 + 1 = 2 + n => n
 //! O(n) => Linear Time Complexity
 
 console.log(fibonacci(5));
