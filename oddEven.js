@@ -1,11 +1,7 @@
-function oddEven(n) {
-  if (n % 2 === 0) {
-    //* 1
-    return console.log(`${n} is even number`); //* 1
-  } else {
-    //* 1
-    return console.log(`${n} is odd number`); //* 1
-  }
+function isEven(n) {
+  return n % 2 === 0; //* 1
 }
 
-oddEven(4);
+//! T = 1 => O(1)
+
+console.log(isEven(4));
