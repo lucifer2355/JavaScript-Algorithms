@@ -1,16 +1,23 @@
 function isPowerOfTwo(n) {
   if (n < 1) {
-    return false;
+    //* 1
+    return false; //* 1
   }
-  let divideNumber = n;
+  let divideNumber = n; //* 1
   while (divideNumber !== 1) {
+    //* 1
     if (divideNumber % 2 !== 0) {
-      return false;
+      //* n
+      return false; //* 1
     }
-    divideNumber = divideNumber / 2;
+    divideNumber = divideNumber / 2; //* n
   }
-  return true;
+  return true; //* 1
 }
+
+//! Best Case: n = 13 => T => O(1)
+//! Average Case: O(log n)
+//! Wrost Case: n = 1,000,000....... => T => O(log n)
 
 console.log(isPowerOfTwo(8));
 console.log(isPowerOfTwo(5));
