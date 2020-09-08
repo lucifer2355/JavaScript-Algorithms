@@ -4,7 +4,7 @@ function isPowerOfTwo(n) {
   }
   let divideNumber = n;
   while (divideNumber !== 1) {
-    if (divideNumber & (2 !== 0)) {
+    if (divideNumber % 2 !== 0) {
       return false;
     }
     divideNumber = divideNumber / 2;
