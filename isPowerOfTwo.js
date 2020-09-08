@@ -25,7 +25,7 @@ function isPowerOfTwo(n) {
   if (n < 1) {
     return false;
   }
-  //* bite wise notation | Binary
+  //* bitewise operators | Binary
   return (n & (n - 1)) === 0; //* n
 }
 
