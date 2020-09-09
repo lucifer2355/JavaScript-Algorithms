@@ -2,6 +2,8 @@
 //   return (n / 2) * (1 + n); //* 1
 // }
 
+//! T = O(1)
+
 function sum(numbers) {
   let result = 0; //* 1
   for (const number of numbers) {
