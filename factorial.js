@@ -6,4 +6,6 @@ function factorial(n) {
   return result;
 }
 
+//! T => O(n) => Linear Time Complexity
+
 console.log(factorial(5));
