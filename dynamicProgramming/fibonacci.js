@@ -14,4 +14,6 @@ function fibonacci(n, memo) {
   return result;
 }
 
+//! Time Complexity: O(n)
+
 console.log(fibonacci(5, {}));
