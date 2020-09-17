@@ -15,8 +15,8 @@ function knapsack(elements, capacity) {
 }
 
 const items = [
-  { name: "a", value: 3, weight: 3 },
   { name: "b", value: 6, weight: 8 },
+  { name: "a", value: 3, weight: 3 },
   { name: "c", value: 10, weight: 3 },
 ];
 
@@ -24,3 +24,5 @@ const maxCap = 8;
 
 const sack = knapsack(items, maxCap);
 console.log(sack);
+
+//! only add 'b' in greedy algorithm that's why use dynamic algorithms
