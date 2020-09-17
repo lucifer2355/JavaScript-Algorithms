@@ -26,3 +26,6 @@ const targetAmount = 129;
 
 const change = findCoins(availableCoins, targetAmount);
 console.log(change);
+
+//! [8, 6, 5, 1] = Target = 11 => Greedy Output => 8: 1, 1: 3
+//! Expect Output => 6: 1, 5: 1
