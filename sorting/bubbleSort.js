@@ -20,5 +20,9 @@ function bubbleSort(arr) {
   return resultArray;
 }
 
+//! Best Case: T => O(n)
+//! Average Case: T => O(n^2)
+//! Worst Case: T => O(n^2)
+
 const arr = [5, 10, -3, -10, 1, 100, 99];
 console.log(bubbleSort(arr));
