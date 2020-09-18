@@ -1,6 +1,6 @@
 function fibonacci(n, memo) {
   let result;
-  console.log(memo[n]);
+
   if (memo[n]) {
     return memo[n];
   }
