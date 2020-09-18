@@ -8,5 +8,9 @@ function findElement(arr, element) {
   }
 }
 
+//! Best Case: T => O(1)
+//! Average Case: T=> O(n)
+//! Worst Case: T => O(n)
+
 const arr = [5, 3, 10, -10, 33, 51];
 console.log(findElement(arr, 10));
