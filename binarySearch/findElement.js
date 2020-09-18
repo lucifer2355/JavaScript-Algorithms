@@ -17,6 +17,10 @@ function findElement(sortedArr, element) {
   }
 }
 
+//! Best Case: T => O(1)
+//! Average Case: T => O(log n)
+//! Worst Case: T => O(log n)
+
 const arr = [1, 5, 9, 13, 99, 100];
 
 console.log(findElement(arr, 99));
