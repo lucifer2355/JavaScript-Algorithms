@@ -29,5 +29,9 @@ function quickSort(arr) {
   );
 }
 
+//! Best Case: T => O(n * log n)
+//! Average Case: T => O(n^logb a)
+//! Worst Case: T => O(n^2)
+
 const arr = [-3, 10, 1, 100, -10, 22, 15];
 console.log(quickSort(arr));
