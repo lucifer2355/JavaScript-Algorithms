@@ -35,5 +35,9 @@ function mergeSort(arr) {
   return mergedArray;
 }
 
+//! Best CAse: T => O(n * log n)
+//! Average Case: T => O(n * log n)
+//! Worst Case: T => O(n * log n)
+
 const arr = [-10, 33, 5, 10, 3, -19, -9];
 console.log(mergeSort(arr));
