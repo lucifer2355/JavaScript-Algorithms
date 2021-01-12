@@ -1,4 +1,4 @@
-const reversArray = (array) => {
+const reverseArray = (array) => {
   let startIndex = 0;
   let endIndex = array.length - 1;
 
@@ -9,7 +9,8 @@ const reversArray = (array) => {
     startIndex++;
     endIndex--;
   }
+
   return array;
 };
 
-console.log(reversArray([1, 2, 3, 4, 5, 6]));
+console.log(reverseArray([1, 2, 3, 4, 5, 6]));
