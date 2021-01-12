@@ -1,14 +1,36 @@
 const sort012 = (array, n) => {
-  let sortArray = [];
-  const middle = Math.floor(n / 2);
+  let low = 0;
+  let high = n - 1;
+  let mid = 0;
 
-  if (n === 3) return sortArray.push(array[0], array[n - 1], array[middle]);
+  while (mid <= high) {
+    switch (array[mid]) {
+      //! If element is 0
+      case 0:
+        let tempLow = array[low];
+        array[low] = array[mid];
+        array[mid] = tempLow;
+        low++;
+        mid++;
+        break;
 
-  const loopLimit = n - sortArray.length;
-  for (let i = 0; i < loopLimit; i++) {
-    sortArray.push(array[middle] + 1);
+      //! If element is 1
+      case 1:
+        mid++;
+        break;
+
+      //! If the element is 2;
+      case 2:
+        let temp = array[high];
+        array[high] = array[mid];
+        array[mid] = temp;
+        mid++;
+        high--;
+        break;
+    }
   }
-  console.log(sortArray);
+
+  return array;
 };
 
-console.log(sort012([0, 2, 1, 2, 0], 5));
+console.log(sort012([0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 2, 2], 12));
