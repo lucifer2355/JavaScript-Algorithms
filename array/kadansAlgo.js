@@ -11,4 +11,7 @@ const kadanesAlgo = (array) => {
   return max;
 };
 
+//! T => O(n)
+//! S => O(1)
+
 console.log(kadanesAlgo([-2, -3, 4, -1, -2, 1, 5, -3]));
