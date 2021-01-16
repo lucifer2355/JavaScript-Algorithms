@@ -4,10 +4,10 @@ const mergeIntervals = (array) => {
   array.sort((a, b) => a[0] - b[0]);
 
   for (const num of array) {
-    if (currentInterval[0] < num[0] && currentInterval[1] > num[0]) {
-      result.push([currentInterval[0], Math.max(num[1], currentInterval[1])]);
+    if (num[0] <= currentInterval[1]) {
+      currentInterval[1] = Math.max(num[1], currentInterval[1]);
     } else {
-      // console.log(num);
+      result.push(currentInterval);
       currentInterval = num;
     }
   }
