@@ -1,3 +1,5 @@
+//! is array is sorted?
+
 const mergeIntervals = (array) => {
   let result = [];
   let currentInterval = array[0];
