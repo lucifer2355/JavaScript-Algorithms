@@ -1,12 +1,49 @@
 const countInversions = (array) => {
-  const result = [];
-  for (let i = 0; i < array.length - 1; i++) {
-    for (let j = i + 1; j < array.length; j++) {
-      if (array[i] > array[j]) result.push([array[i], array[j]]);
-    }
-  }
+  let count = mergeSort({ arr: array, count: 0 });
 
-  return result.length;
+  return count;
 };
 
-console.log(countInversions([8, 4, 2, 1]));
+const mergeSort = (obj) => {
+  if (obj.arr.length === 1) {
+    return obj;
+  }
+  let middle = Math.floor(obj.arr.length / 2);
+  let left = { arr: obj.arr.slice(0, middle), count: obj.count };
+  let right = { arr: obj.arr.slice(middle), count: obj.count };
+  let result = merge(mergeSort(left), mergeSort(right));
+  return result;
+};
+
+function merge(leftArray, rightArray) {
+  let count = leftArray.count + rightArray.count;
+  let temp = [];
+  let leftArrayIndex = 0;
+  let rightArrayIndex = 0;
+
+  while (
+    leftArrayIndex < leftArray.arr.length ||
+    rightArrayIndex < rightArray.arr.length
+  ) {
+    if (
+      leftArrayIndex >= leftArray.arr.length ||
+      leftArray.arr[leftArrayIndex] > rightArray.arr[rightArrayIndex]
+    ) {
+      temp.push(rightArray.arr[rightArrayIndex]);
+      rightArrayIndex++;
+      count += leftArray.arr.length - leftArrayIndex;
+    } else {
+      temp.push(leftArray.arr[leftArrayIndex]);
+      leftArrayIndex++;
+    }
+  }
+  temp = [
+    ...temp,
+    ...leftArray.arr.slice(leftArrayIndex),
+    ...rightArray.arr.slice(rightArrayIndex),
+  ];
+  console.log(temp);
+  return { arr: temp, count };
+}
+
+console.log(countInversions([5, 3, 2, 4, 1]));
