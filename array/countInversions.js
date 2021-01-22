@@ -17,7 +17,7 @@ const mergeSort = (obj) => {
 
 function merge(leftArray, rightArray) {
   let count = leftArray.count + rightArray.count;
-  let temp = [];
+  const temp = [];
   let leftArrayIndex = 0;
   let rightArrayIndex = 0;
 
@@ -37,12 +37,7 @@ function merge(leftArray, rightArray) {
       leftArrayIndex++;
     }
   }
-  temp = [
-    ...temp,
-    ...leftArray.arr.slice(leftArrayIndex),
-    ...rightArray.arr.slice(rightArrayIndex),
-  ];
-  console.log(temp);
+
   return { arr: temp, count };
 }
 
