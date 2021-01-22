@@ -8,8 +8,15 @@ const rotateMatrix = (array) => {
     }
   }
 
-  console.log(array);
+  for (let i = 0; i < array.length; i++) {
+    array[i].reverse();
+  }
+
+  return array;
 };
+
+//! T => O(n^2) + O(n) = O(n^2)
+//! S => O(1)
 
 console.log(
   rotateMatrix([
