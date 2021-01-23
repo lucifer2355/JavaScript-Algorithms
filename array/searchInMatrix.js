@@ -28,15 +28,13 @@ const targetInMatrix = (array, target) => {
   let high = array.length * array[0].length - 1;
 
   while (low <= high) {
-    let mid = Math.floor((low + high) / 2);
+    const mid = Math.floor((low + high) / 2);
     const firstIndex = Math.floor(mid / array[0].length);
     const secondIndex = Math.floor(mid % array[0].length);
 
     if (array[firstIndex][secondIndex] === target) return true;
     if (array[firstIndex][secondIndex] < target) low = mid + 1;
-    else {
-      high = mid - 1;
-    }
+    else high = mid - 1;
   }
 
   return false;
