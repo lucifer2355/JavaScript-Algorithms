@@ -2,8 +2,8 @@
 
 const mergeIntervals = (array) => {
   let result = [];
-  let currentInterval = array[0];
   array.sort((a, b) => a[0] - b[0]);
+  let currentInterval = array[0];
 
   for (const num of array) {
     if (num[0] <= currentInterval[1]) {
@@ -17,6 +17,9 @@ const mergeIntervals = (array) => {
 
   return result;
 };
+
+//! T => O(nlogn) + O(n)
+//! S => O(n)
 
 console.log(
   mergeIntervals([
