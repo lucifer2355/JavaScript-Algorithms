@@ -3,5 +3,8 @@ function sum(n) {
   for (let i = 0; i <= n; i++) {
     result += i;
   }
-  console.log(result);
+
+  return result;
 }
+
+console.log(sum(5));
