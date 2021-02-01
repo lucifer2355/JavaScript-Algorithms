@@ -1,3 +1,4 @@
+//* appear more than n/2
 const firstApproach = (array) => {
   const n = {};
   let result;
@@ -18,6 +19,7 @@ const firstApproach = (array) => {
 };
 
 const majorityElement = (array) => {
+  //! Boyer More Voting Algorithm
   let count = 0;
   let element = 0;
 
@@ -28,6 +30,9 @@ const majorityElement = (array) => {
   }
 
   return element;
+
+  //! T => O(n)
+  //! S => O(1)
 };
 
 console.log(majorityElement([7, 7, 5, 7, 5, 1, 5, 7, 5, 5, 7, 7, 5, 5, 5, 5]));
