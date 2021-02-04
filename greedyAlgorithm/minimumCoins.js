@@ -2,15 +2,14 @@ const minimumCoins = (array) => {
   const result = [];
   let findAmount = 87;
 
-  for (let i = 0; i < array.length; i++) {
+  for (let i = array.length - 1; i > 0; i--) {
     if (findAmount === 0) return result;
     else if (findAmount === array[i]) {
       result.push(array[i]);
       return result;
-    } else if (findAmount < array[i]) {
-      result.push(array[i - 1]);
-      findAmount = findAmount - array[i - 1];
-      i = 0;
+    } else if (findAmount > array[i]) {
+      result.push(array[i]);
+      findAmount = findAmount - array[i];
     }
   }
 };
