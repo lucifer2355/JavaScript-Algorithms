@@ -38,7 +38,7 @@ const longestSeq1 = (array) => {
 
   return result;
 
-  //! T => O(n) + O(n) = O(2n)
+  //! T => O(n) + O(n) + O(n) = O(3n)
   //! S => O(n)
 };
 
@@ -66,7 +66,7 @@ const longestSeq2 = (array) => {
 
   return longestLength;
 
-  //! T => O(n) + O(n) = O(2n)
+  //! T => O(n) + O(n) + O(n) = O(3n)
   //! S => O(n)
 };
 
