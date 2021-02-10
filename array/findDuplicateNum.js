@@ -2,8 +2,8 @@ const findDuplicate = (array) => {
   let nums = {};
 
   for (const num of array) {
-    if (nums[num] === undefined) nums[num] = true;
-    else return num;
+    if (nums[num]) return num;
+    else nums[num] = true;
   }
 };
 
