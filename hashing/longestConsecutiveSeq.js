@@ -1,4 +1,4 @@
-const longestSeq = (array) => {
+const longestSeq1 = (array) => {
   let result;
   let largestRange = 0;
   const nums = {};
@@ -37,6 +37,37 @@ const longestSeq = (array) => {
   }
 
   return result;
+
+  //! T => O(n) + O(n) = O(2n)
+  //! S => O(n)
 };
 
-console.log(longestSeq([102, 4, 100, 1, 101, 3, 2]));
+const longestSeq2 = (array) => {
+  let longestLength = 0;
+  const nums = {};
+
+  for (const num of array) {
+    nums[num] = true;
+  }
+
+  for (const num of array) {
+    if (nums[num - 1] === undefined) {
+      let currentLength = 1;
+      let currentNum = num;
+
+      while (nums[currentNum + 1]) {
+        currentNum += 1;
+        currentLength++;
+      }
+
+      longestLength = Math.max(longestLength, currentLength);
+    }
+  }
+
+  return longestLength;
+
+  //! T => O(n) + O(n) = O(2n)
+  //! S => O(n)
+};
+
+console.log(longestSeq2([102, 4, 100, 1, 101, 3, 2]));
