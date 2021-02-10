@@ -1,5 +1,6 @@
 const longestSeq = (array) => {
-  const result = [];
+  let result;
+  let largestRange = 0;
   const nums = {};
 
   for (const num of array) {
@@ -7,31 +8,31 @@ const longestSeq = (array) => {
   }
 
   for (const num of array) {
-    if (!nums[false]) continue;
+    if (!nums[num]) continue;
 
     nums[num] = false;
     let left = num - 1;
     let right = num + 1;
-    const currentSeq = [];
+    const currentSeq = [num];
+    let currentLength = 1;
 
     while (nums[left]) {
-      console.log(left);
       num[left] = false;
-      currentSeq.push(num[left]);
+      currentSeq.push(left);
+      currentLength++;
       left--;
-      console.log("left", currentSeq);
     }
 
     while (num[right]) {
-      console.log(right);
       num[right] = false;
-      currentSeq.push(num[right]);
+      currentSeq.push(right);
+      currentLength++;
       right++;
-      console.log("right", currentSeq);
     }
 
-    if (result.length < currentSeq.length) {
-      result.push(currentSeq);
+    if (largestRange < currentLength) {
+      largestRange = currentLength;
+      result = currentSeq;
     }
   }
 
