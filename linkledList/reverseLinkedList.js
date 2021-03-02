@@ -1,7 +1,22 @@
+class LinkedList {
+  constructor() {
+    this.head = null;
+    this.tail = null;
+  }
+
+  append(value) {
+    const newNode = { value: value, next: null };
+
+    if (this.tail) this.tail.next = newNode;
+    this.tail = newNode;
+    if (!this.head) this.head = newNode;
+  }
+}
+
 const reverseLinkedList = head => {
   let prev = null;
   let curr = head;
-  let next = curr.next;
+  let nextTemp = null;
 
   while (curr != null) {
     nextTemp = curr.next;
@@ -13,4 +28,11 @@ const reverseLinkedList = head => {
   return prev;
 };
 
-console.log(reverseLinkedList());
+const linkedList = new LinkedList();
+linkedList.append(1);
+linkedList.append(2);
+linkedList.append(3);
+linkedList.append(4);
+linkedList.append(5);
+
+console.log(reverseLinkedList(linkedList));
