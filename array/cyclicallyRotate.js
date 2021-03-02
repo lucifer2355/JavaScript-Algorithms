@@ -8,4 +8,7 @@ const cyclicallyRotate = (array) => {
   return array;
 };
 
+//! T => O(n)
+//! S => T(1)
+
 console.log(cyclicallyRotate([1, 2, 3, 4, 5]));
