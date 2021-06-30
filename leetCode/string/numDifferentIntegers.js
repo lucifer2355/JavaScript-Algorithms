@@ -8,6 +8,9 @@ const numDifferentIntegers = (word) => {
 
     while (!isNaN(parseInt(string[i]))) {
       num = "" + num + parseInt(string[i]);
+
+      if (num.length >= 2 && num[0] === "0") num = num.slice(1);
+
       i++;
     }
 
@@ -17,4 +20,4 @@ const numDifferentIntegers = (word) => {
   return integers.length;
 };
 
-console.log(numDifferentIntegers("a123bc34d8ef34"));
+console.log(numDifferentIntegers("a1b01c001"));
