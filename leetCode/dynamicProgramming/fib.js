@@ -6,4 +6,4 @@ const fib = (n, memo = {}) => {
   return memo[n];
 };
 
-console.log(fib(50));
+console.log(fib(6));
