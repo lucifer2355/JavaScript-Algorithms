@@ -1,5 +1,4 @@
-const reverseString = (s, sIndex = 0, eIndex = 0) => {
-  if (eIndex === 0) eIndex = s.length - 1;
+const reverseString = (s, sIndex = 0, eIndex = s.length - 1) => {
   if (sIndex > eIndex) return s;
 
   [s[sIndex], s[eIndex]] = [s[eIndex], s[sIndex]];
