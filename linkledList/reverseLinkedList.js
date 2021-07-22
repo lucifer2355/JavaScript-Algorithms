@@ -13,7 +13,7 @@ class LinkedList {
   }
 }
 
-const reverseLinkedList = head => {
+const reverseLinkedList = (head) => {
   let prev = null;
   let curr = head;
   let nextTemp = null;
