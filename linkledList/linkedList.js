@@ -19,6 +19,24 @@ class LinkedList {
     if (!this.tail) this.tail = newNode;
   }
 
+  delete(value) {
+    if (!this.head) return;
+
+    while (this.head && this.head.value === value) {
+      this.head = this.head.next;
+    }
+
+    let curNode = this.head;
+    while (curNode.next) {
+      if (curNode.next.value === value) curNode.next = curNode.next.next;
+      else curNode = curNode.next;
+    }
+
+    if (this.tail.value === value) {
+      this.tail = curNode;
+    }
+  }
+
   toArray() {
     const elements = [];
 
@@ -35,6 +53,8 @@ class LinkedList {
 const linkedList = new LinkedList();
 linkedList.append(1);
 linkedList.append(2);
+linkedList.append(2);
 linkedList.prepend(3);
+linkedList.delete(1);
 
 console.log(linkedList.toArray());
