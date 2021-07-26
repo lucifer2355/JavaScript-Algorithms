@@ -19,6 +19,18 @@ class LinkedList {
     if (!this.tail) this.tail = newNode;
   }
 
+  find(value) {
+    if (!this.head) return null;
+
+    let curNode = this.head;
+    while (curNode) {
+      if (curNode.value === value) return curNode;
+      curNode = curNode.next;
+    }
+
+    return null;
+  }
+
   delete(value) {
     if (!this.head) return;
 
