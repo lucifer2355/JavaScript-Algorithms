@@ -31,6 +31,15 @@ class LinkedList {
     return null;
   }
 
+  insertAfter(value, afterValue) {
+    const existingNode = this.find(afterValue);
+
+    if (existingNode) {
+      const newNode = { value: value, next: existingNode.next };
+      existingNode.next = newNode;
+    }
+  }
+
   delete(value) {
     if (!this.head) return;
 
