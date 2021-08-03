@@ -1,4 +1,4 @@
-const repeateMissingNum = (array) => {
+const repeatMissingNum = (array) => {
   let result = [0, 0];
   let nums = {};
 
@@ -18,4 +18,4 @@ const repeateMissingNum = (array) => {
   return result;
 };
 
-console.log(repeateMissingNum([4, 3, 6, 2, 1, 1]));
+console.log(repeatMissingNum([4, 3, 6, 2, 1, 1]));
