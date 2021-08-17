@@ -10,14 +10,14 @@ const nMeetings = (start, end) => {
     meetings[i].start = start[i];
     meetings[i].end = end[i];
     meetings[i].pos = i + 1;
-  }
+  } //! O(n)
 
   meetings.sort((a, b) => {
     if (a.end > b.end) return 1;
     else if (a.end < b.end) return -1;
     else if (a.pos > b.pos) return 1;
     else return -1;
-  });
+  }); //! O(nlogn)
 
   let limit = meetings[0].end;
 
@@ -26,9 +26,12 @@ const nMeetings = (start, end) => {
       limit = meetings[i].end;
       result++;
     }
-  }
+  } //! O(n)
 
   return result;
 };
+
+//! T => O(nlogn)
+//! S => O(n)
 
 console.log(nMeetings([1, 0, 3, 8, 5, 8], [2, 6, 4, 9, 7, 9]));
