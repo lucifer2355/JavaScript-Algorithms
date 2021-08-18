@@ -12,7 +12,7 @@ const minimumPlatforms = (arr, dept, n) => {
     if (arr[i] <= dept[j]) {
       platformNeeded++;
       i++;
-    } else if (arr[i] >= arr[j]) {
+    } else if (arr[i] > dept[j]) {
       platformNeeded--;
       j++;
     }
